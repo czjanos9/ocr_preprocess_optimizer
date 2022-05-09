@@ -1,0 +1,36 @@
+RISC (Reduced Instruction Set Computer)
+Az 1980-as évek elején – az alkalmazott utasítások statisztikai elemzése alapján – megtervez-
+ték a RISC (Csökkentett Utasításkészletű Számítógép) CPU-t, amelyben nem használtak
+interpretert. Ezek a processzorok jelentősen különböztek az akkoriban kereskedelemben lévőktől,
+azokkal nem voltak kompatibilisek. Ezeknél viszonylag kisszámú (kb.50) végrehajtható utasítást
+használtak.
+A RISC processzor minden egyszerű parancsot közvetlenül végre tud hajtani, így nincsenek
+mikroutasítások, nincs interpreter, és nincs szükség a mikroprogram-memóriára sem. Ebből kö-
+vetkezik, hogy jóval egyszerűbb és gyorsabb a CPU.
+Jelentősebb RISC processzorok a SUN szerverekben és munkaállomásokban használt pro-
+cesszorok, a DEC Alpha processzora és a HP munkaállomások processzorai.
+Az Intel a 486-os sorozattól kezdve egy olyan processzortípust fejlesztett ki, amely ugyan
+CISC processzor, de tartalmaz egy RISC magot. Így a leggyakrabban használt utasításokat
+interpreter nélkül hajtja végre.
+Párhuzamos utasításvégrehajtás (átlapolás)
+A CPU sebességének növelését az utasítások párhuzamos végrehajtásával is megvalósíthatjuk.
+A párhuzamos működés megoldható a CPU-n belül, azaz utasításszinten, és CPU-n kívül, vagyis
+több processzor összekapcsolásával.
+Az utasításszintű párhuzamosításra az ad lehetőséget, hogy a processzor egy ciklus alatt több
+részfeladatot hajt végre (az utasítás betöltése a memóriából, az utasítás dekódolása, az operandu-
+sok lekérdezése, majd az utasítás végrehajtása). A hagyományos processzorok esetében a követ-
+kező utasításnak meg kell várnia azt, hogy az előző befejeződjön. A párhuzamos processzorok
+esetében az utasítás egy úgynevezett adatcsatornába (pipeline) kerül. Ennek működése a követ-
+kező: az első utasítást beolvassuk a memóriából, majd az a csatorna második állomására, a dekó-
+doláshoz kerül. A dekódolás alatt a csatornába beolvassuk a következő utasítást. Ezt követően a
+csatornában minden adat továbbhalad, az első utasítás az operandus lekérdezéshez, a második a
+dekódoláshoz, közben beolvassuk a harmadik utasítást,...és így tovább. A folyamat hasonló a
+futószalagon végzett szereléshez. Belátható, hogy ennél az egyszerűbb ciklusnál is egy időben
+négy utasítással foglalkozik a CPU.
+Ilyen elven működnek az Intel processzorok a 486-tól kezdve (a Pentiumokban már nemcsak
+egy pipeline-t használnak).
+A másik párhuzamos működési lehetőség az, amikor a számítógépben egyszerre több procesz-
+szort használunk. Ilyenkor az operációs rendszernek kell gondoskodnia a processzorok ütemezé-
+séről. A processzorok adatkapcsolatát általában a közös memória biztosítja. Ilyenek az array és a
+multiprocesszoros számítógépek.
+10.

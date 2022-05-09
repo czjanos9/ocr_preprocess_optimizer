@@ -1,0 +1,41 @@
+Abban az esetben, ha a programunk befejeződött, vagy valamilyen oknál fogva felfüggesztet-
+tük a végrehajtását, a processzornak le kellene állnia. Azonban ez nem megengedett állapot, hi-
+szen a processzor indít és felügyel minden folyamatot, így egy álló processzort hiába „szólítana”
+meg mondjuk egy periféria. Ezért – amikor a processzornak nincs feladata – egy úgynevezett
+várakozó ciklusban működik. (A modern mikroprocesszorok és mikrokontrollerek esetében léte-
+zik egy SLEEP üzemmód is, amikor meghatározott időre felfüggeszthetjük a processzor műkö-
+dését. Ilyenkor a hardvernek kell gondoskodnia az újraindításról, illetve a működés folytatásáról.)
+A processzorvezérelt kiszolgáló állapot: megszakítás (interrupt)
+A processzor mindaddig normál működési állapotban van, amíg valamilyen külső eszköz ki-
+szolgálása nem válik szükségessé. Ekkor az input/output eszközök közötti kommunikációt min-
+dig a processzor vezérli. Ez történhet a processzor kezdeményezésére (például programmal ki-
+írunk a terminálra), illetve valamelyik eszköz kérésére.
+Abban az esetben, ha valamilyen input/output eszköz kér kiszolgálást, akkor ezt jelzi a pro-
+cesszornak a vezérlőbuszon keresztül (interrupt kérés). Ha a processzor fogadni tudja a kérést,
+felfüggeszti az éppen futó program működését (megszakítás), és átadja a vezérlést az eszköz-
+kiszolgáló programnak.
+Több, egyidejű kérés esetén hardveresen (vektor-interrupt), vagy programmal (operációs rend-
+szerrel) kell eldönteni a kiszolgálás sorrendjét.
+A processzortól független kiszolgáló állapot: DMA (Direct Memory Access)
+Egy számítógépes rendszerben általában a processzor irányít minden műveletet. Azonban le-
+hetnek olyan feladatok, amikor a processzor annyira leterhelt, hogy más egységeknek kell rá vá-
+rakozniuk, valamint gyakran előfordul olyan tevékenység, amit a processzortól függetlenül is
+végre lehet hajtani.
+A fentiekből következik, hogy célszerű a buszon egy processzortól független működési módot
+biztosítani, ilyen például a memória és a háttértár közötti adatátvitel. Ezt a módszert közvetlen
+adatátvitelnek, DMA-nak nevezzük. A processzor ilyenkor csak a tranzakció elindításában és a
+befejezés nyugtázásában vesz részt, egyébként a DMA-vezérlő átveszi a rendszerbusz irányítását.
+2.2.5. Processzortípusok
+CISC (Complex Instruction Set Computer)
+A számítógép-alkalmazások fejlődésével megnőtt az igény az egyre többet tudó, egyre több
+utasítást ismerő processzorok iránt és szükség volt a régi gépekkel való kompatibilitás megőrzé-
+sére is, ezért egyre bonyolultabb gépi utasításokat vezettek be. Ezen utasításokat végrehajtó pro-
+cesszorokat CISC (Összetett Utasításkészletű Számítógép) processzornak nevezzük.
+Az összetett utasításkészlet nagymértékben megkönnyíti az assembly programozást, valamint
+hatékony támogatást nyújt a magasszintű programnyelvekhez. A nagy utasításkészlet (akár 2-300
+utasítása is lehet egy processzornak) bonyolultabbá és időigényesebbé teszi a mikroprogram futá-
+sát, a nagy mikroprogram pedig nagy belső mikroprogram-memóriát igényel. (A mikroprogram
+egy interpreter, amely a gépikódú utasításokat futtatja.)
+Jelentősebb CISC processzorok az Intel sorozat (286, 386, 486, Pentium), a Digital (DEC)
+PDP és VAX processzorai, valamint az IBM nagygépeiben használt processzorok.
+9

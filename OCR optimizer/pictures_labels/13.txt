@@ -1,0 +1,45 @@
+3. Bináris aritmetika
+3.1. A számrendszerek
+A mindennapi életben a számokat a tízes (decimális) számrendszerben ábrázoljuk. Ez a törté-
+nelem során alakult ki, talán azért, mert az ember a tíz ujját is felhasználta a számolás megköny-
+nyítésére. Korábban más számrendszereket és számábrázolásokat is használtak, például: római
+számok, babilóniai hatvanas számrendszer. (Innen ered az idő-mértékegység (óra) felosztása is.)
+A mechanikus gépek is a tízes számrendszert használták, mivel az adatmegadás és az eredmény
+kiértékelése így volt a legegyszerűbb. Ezekben a berendezésekben általában egy tárcsa helyzete
+(elfordulása) jelezte, hogy melyik alaki értékről van szó, a tárcsák egymáshoz viszonyított elhe-
+lyezése pedig a helyi értéket jelentette.
+Ha az elektronikus berendezések is tízes számrendszert használnának, akkor nagyon bonyo-
+lult, tíz különböző állapotot tükröző áramkört kellene építeni. Ennél sokkal egyszerűbbek és így
+megbízhatóbbak a két-állapotú elektronikák. (Elég azt vizsgálnunk, hogy egy vezetőben folyik
+áram vagy nem, egy kapcsoló be- vagy kikapcsolt állapotban van-e.) Ebből következik, hogy
+olyan belső kódrendszerre (számábrázolásra) van szükség, amelyben a használt állapotok (jelek)
+száma kettő. Így az elektronikus számítógépek a kettes (bináris) számrendszert használják. To-
+vábbi előny, hogy a bináris adatábrázolás segítségével egységesen tudjuk kezelni az aritmetikai
+és logikai adatokat, műveleteket. Tehát: egy kétállapotú elektronikai elem jelölheti a bináris 1-et
+vagy 0-át és a logikai igen vagy nem állapotot.
+A másik ok: a bináris számrendszer használatával minden – a kettes számrendszerben – vég-
+zett művelet felírható elemi logikai műveletek sorozatával. Ennek megfelelően a számítógép
+elektronikája is felépíthető néhány elemi logikai áramkör felhasználásával.
+Természetesen a számítógép felhasználóját nem érdekli, hogy az adatokat milyen számrend-
+szerben tárolja a gép, ő a megszokott tízes számrendszerben szeretné megadni az értékeket, és az
+eredményt is így várja. Ezért a bevitelnél és a kimenetnél meg kell oldani a gyors és viszonylag
+pontos konverziót. (Hogy mit jelent a viszonylag pontos, arra még visszatérünk!)
+Megjegyezzük, hogy ha a felhasználót nem is érdekli a számítógép belső számábrázolása, azt
+egy programozó már nem hagyhatja figyelmen kívül.
+Minden nem negatív szám felírható a következő alakban:
+l
+l
+k
+k
+k
+k aaaaaa −
+−
+−
+−
+−
+− ⋅++⋅++⋅++⋅+⋅ 10...1010...1010 1
+101
+1
+1 (3-1.)
+ahol: k, j = 0, 1, 2, ... és ak ... a0 ... a-l 9-nél nem nagyobb, nem negatív, egész szám.
+15

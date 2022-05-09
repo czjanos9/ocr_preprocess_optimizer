@@ -1,0 +1,37 @@
+2.1. A rendszerbusz (sín)
+Sínnek nevezzük az azonos típusú adatátvitelre szolgáló vonalak (vezetékek) összességét. En-
+nek értelmében a sínrendszerű architektúráknál nem is egy, hanem három buszról beszélhetünk,
+úgymint címbusz (address bus), adatbusz (data bus) és vezérlőbusz (control bus). Ezek együttes
+neve a rendszerbusz.
+A címbusz segítségével kijelölhetjük a szükséges input/output eszközt, vagy a memória tároló
+rekeszét. Az adatbusz biztosítja az adatáramlást a részegységek között, és a vezérlőbuszon a
+számítógép ütemezéséhez, vezérléséhez szükséges információk haladnak.
+A buszon átvihető adat nagysága (a busz szélessége) számítógépfüggő. A busz szélessége azt
+jelenti, hogy egyszerre (párhuzamosan) hány bitnyi információ haladhat át rajta.
+Mivel a buszon egyszerre csak egy adat tartózkodhat, előfordulhat, hogy a részegységeknek
+várakozniuk kell arra, hogy a buszt használhassák. Illetve az is előfordulhat, hogy a részegység
+foglalt és akkor a buszon lévő adatnak kell várakoznia, ami meggátolja más eszközök busz-
+hozzáférését. A gyorsítás érdekében az egységek és az adatbusz közé egy átmeneti tárolót,
+adatpuffert (cache memóriát) építenek.
+A számítógépben használt részegységek (processzor, memória, különböző input/output eszkö-
+zök) nem egyforma sebességgel működnek, ezért az újabb számítógép-konstrukciókban nem egy
+sínrendszert használnak, hanem többet. Például egyet a lassúbb perifériákhoz, egy gyorsabb sínt a
+nagysebességű eszközökhöz (pl. winchester), és esetleg egy harmadikat a processzor és a memó-
+riák között. Ezt a rendszert osztott sínrendszernek nevezzük. Ilyenkor a különböző sebességű
+buszokat szintén pufferrel (cache-sel) kell összekapcsolni.
+2.2. CPU (Central Processing Unit)
+A központi egység, vagy processzor (CPU) feladata az operatív (rendszer) memóriában tárolt
+programok végrehajtása, a számítógép részegységeinek vezérlése.
+Általánosságban a processzor felépítéséről elmondható, hogy három fő egységből áll. Az
+aritmetikai és logikai egység (ALU), a vezérlőegység és a regiszterek. A CPU-n belüli részegysé-
+geket egy úgynevezett belső buszrendszer köti össze.
+2.2.1. ALU (Arithmetic and Logic Unit)
+Az ALU legfontosabb része az összeadó. Az összeadás előjeles bináris számokkal, kettes
+komplemens kódban történik. Ezen kívül képes az adatok bitenkénti léptetésére, és az alapvető
+logikai műveletek (NOT, AND, OR, XOR) végrehajtására. A műveletekhez használt adatok és
+eredmények általában a regisztertömbben helyezkednek el.
+Az aritmetikai és logikai egység feladata lehet még a fixpontos szorzás és osztás is. A lebegőpon-
+tos aritmetikai, és a hosszú (több regiszteres) egész számokkal végzett műveleteket egy lebegő-
+pontos aritmetikai egység végzi, ami lehet akár a processzoron kívül is (ez az úgynevezett társ-
+processzor vagy ko-processzor)
+7

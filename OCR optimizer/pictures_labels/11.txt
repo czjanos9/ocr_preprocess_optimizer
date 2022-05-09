@@ -1,0 +1,40 @@
+2.3.2. ROM (Read Only Memory)
+A RAM-ok használatakor egy alapvető problémával állunk szemben. Amikor bekapcsoljuk a
+számítógépet, az operatív tár üres (pontosabban használhatatlan adatokkal van tele). De akkor
+hogyan induljon el a számítógép, hiszen a processzor csak az operatív memóriában tárolt prog-
+ramok futtatására képes? Két lehetőségünk van: az egyik, hogy valamilyen külső tárolóról töltjük
+fel a memóriát. A másik, hogy az induláshoz olyan memóriát használunk, amelyik tápfeszültség
+nélkül is megőrzi az információt.
+A mindennapi életben számtalan olyan alkalmazás van, ahol nem használunk háttértárat. Pél-
+dául háztartási gépekben, játékokban, különböző vezérlő elektronikákban a programoknak és az
+adatok egy részének meg kell maradnia a kikapcsolás után is.
+Ezekre a feladatokra fejlesztették ki a ROM (csak olvasható memória) áramköröket, amelyek
+tápfeszültség nélkül is megőrzik az információt. Általánosságban megjegyezhetjük, hogy a RAM
+és a ROM között – a CPU szempontjából – csak annyi a különbség, hogy a processzor a ROM-ba
+nem tud írni.
+Az adat a ROM-ba a gyártás során kerül, úgynevezett maszk-programozási technikával. A tá-
+rolt információ utólag nem változtatható meg.
+Annak érdekében, hogy az eszközfejlesztőknek ne a memóriagyártóktól kelljen megrendelni
+az egyedi programozott áramköröket, kifejlesztették a PROM (Programmable ROM), progra-
+mozható ROM áramköröket.
+A PROM egyszer írható memória. Az írás egy viszonylag magas feszültséggel történik, ami-
+vel kiégetnek egy-egy mátrixpontot. Ebből az eljárásból maradt meg a későbbiekben a „program
+beégetés” kifejezés.
+A ROM és a PROM memóriák semmilyen körülmények között nem törölhetők, és nem írha-
+tók újra. Ha mégis új programra van szükségünk, az egész memória-áramkört (chip-et) ki kell
+cserélnünk. (Az eszközök – elsősorban a mikroprogramok – fejlesztésekor, vagy ha a berendezés
+üzemideje alatt új programverziók várhatók, gyakran kell cserélni ezeket az alkatrészeket.) Ezért
+szükség volt olyan ROM típusú memóriákra, amelyeket újra fel lehet használni.
+Az újraprogramozható memóriák első generációi az EPROM (Erasable PROM), a törölhető
+PROM memóriák.
+Az EPROM-ok törlését erős ultraviola fény segítségével végezhetjük. Ez úgy történik, hogy a
+chip tokozásán található egy kis üvegablak, amelyen keresztül megvilágítható az áramköri lapka.
+A fény hatására mindegyik memóriacella értéke 1 lesz. A programozás – hasonlóan a PROM-hoz
+– külön, erre a célra kifejlesztett elektronikával történik.
+Láttuk, hogy az EPROM-ok programozása elég nehézkes: azokat ki kell venni a berendezés-
+ből, egy speciális fényforrással meg kell világítani, egy beégető segítségével be kell programozni,
+majd vissza kell tenni az eredeti helyükre. Erre a folyamatra nincs szükség az EEPROM
+(Electrically Erasable PROM), elektromosan törölhető memóriák esetében.
+Az EEPROM-ok elektromos impulzusokkal, az eredeti helyükön programozhatóak. A mére-
+tük jóval kisebb, mint az EPROM-oké, de lassúbbak és jóval drágábbak azoknál.
+13
