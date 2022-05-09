@@ -1,0 +1,42 @@
+1. Bevezetés
+Neumann János1 fogalmazta mega tárolt program elvét, miszerint a programutasítások
+és az adatok azonos formában (binárisan), ugyanabban a belső memóriában helyezkednek el.
+Így van ez a legkorszerűbb számítógépnél is. Ez azt jelenti, hogy a számítógépen bármilyen
+programozási nyelvet is használunk, az eredmény mindig egy bináris - az operatív memóriá-
+ba tölthető - számsor (programsor).
+Az első számítógépeket gépi kódban programozták, az utasításokat bináris számok for-
+májában kellet a memóriába táplálni. 1946-ban kezdték használni a mnemonikus kódokat,
+majd a szimbolikus nyelveket, amelyekkel nagymértékben megnövelték a programírás haté-
+konyságát. 1949-ben készítették el az első assembler programot.
+A programozás során mindig egy folyamatot írunk le. Elképzeljük, hogy egy feladatot
+hogyan oldanánk meg (milyen folyamattal tudnánk leírni), és ezt probáljuk a számítógéppel
+elvégeztetni. Így, egy programozási nyelvnek, illetve forditóprogramnak az a feladata, hogy
+megteremtse a kapcsolatot az emberi gondolatok és a CPU utasítás-végrehajtása között.
+Minél közelebb áll egy programozási nyelv az emberi gondolkodáshoz, minél egysze-
+rűbben lehet leírni benne a feladatot, annál magasabb szintű nyelvről (programozási nyelv-
+ről) beszélhetünk. (Un. mondatleíró nyelven írunk programot.) Ekkor a forditóprogramra
+hárul a nagyobb feladat, hogy a gépi kódot (futtatható állományt) előállítsa. Ez azonban nem
+a lehető legoptimálisabb, így a program műkődéséhez felesleges utasításokat is kénytelen a
+processzor végrehajtani, ami megnöveli a program erőforrásigényét. Manapság - a korszerű,
+nagysebességű processzorok korában - a programozók nagy része ezzel nem törödik.
+Amikor programjaink optimalizálása, sebességének növelése a célunk, assemblyben (ala-
+csony szinten) kell a programunkat elkészíteni. Ekkor viszont a programozóra hárul a na-
+gyobb feladat, hiszen neki kell úgy megfogalmazni a feladatát, ahogy a CPU "gondolkodik".
+Vannak esetek, amikor az assembly íráskor nem az optimalizálás a célunk. Ilyen, ami-
+kor egy magas szinű nyelv nincs felkészítve bizonyos feladatok elvégzésére: különböző
+konverziók, erőforrások és portok kezelése stb.
+Ahhoz, hogy az assembly-t hatékonyan tudjuk használni, meg kell ismerni a számítógé-
+pek, mikroprocesszorok felépítését, és a bináris aritmetikát. E témákkal foglalkozik a jegyzet
+első része.
+Ezután kerül ismertetésre az Intel mikroprocesszorok működése és programozásuk.
+A jegyzet egyszerű példák segítségével, lépésről-lépésre ismerteti az utasításokat és a
+MASM (Microsoft Macro Assembly) nyelvet. Itt foglalkozunk azzal is, hogy milyen módon
+lehet meghívni egy assembly rutint magas szintű programozási nyelvből.
+A Függelékben - többek között - összefoglalásra kerül az Intel processzorok alap-
+utasításkészlete és a megszakítások (interrup-ok) kezelése is.
+1Neumann János (John von Neumann) 1903. december 28-án született Budapesten. 1925-ben a Zü-
+rich-i Egyetemen vegyészmérnöki diplomát szerzett, majd 1926-ban, Budapesten, matematikából
+doktorált. 1930-ban meghívták a Princeton Egyetemre, ahol nem sokkal később professzorrá nevez-
+ték ki. Fő kutatási területe a matematikai logika, a játékelmélet és a halmazelmélet volt, de foglalko-
+zott fizikai problémák megoldásával is. A II. világháborút követően több számitógépes szabadalom
+fűződik a nevéhez.

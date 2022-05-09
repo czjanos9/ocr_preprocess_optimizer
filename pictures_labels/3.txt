@@ -1,0 +1,32 @@
+Gimesi László
+2. Hardver
+A számítógép fejlődése során – kezdetben – minden egyes számítógép más és más architektú-
+rával rendelkezett. Ez azt jelentette, hogy ahány típusú számítógépet terveztek és építettek, min-
+degyik a többitől eltérő felépítésű volt, a részegységeket más és más elvek alapján kapcsolták
+össze. A legtöbb számítógép-struktúra zsákutcának bizonyult, de volt néhány közülük, amely
+meghatározta a további fejlődést.
+Neumann számára – az ENIAC-kal szerzett tapasztalatok alapján – nyilvánvalóvá vált, hogy a
+számítógép programozása kapcsolók és vezetékek segítségével nagyon körülményes és időigé-
+nyes feladat. Ez a felismerés vezetett az első programtárolású számítógép megalkotásához, ahol a
+memóriában az adatokkal együtt az utasításokat is tárolták.
+Neumann azt is észrevette, hogy az ENIAC-ban használt decimális aritmetika (minden szám-
+jegy ábrázolásához 10 darab elektroncsövet használtak) helyettesíthető bináris aritmetikával.3
+Azokat a számítógépeket, amelyeket a fenti alapgondolatok alapján építettek, ma Neumann-
+elvű számítógépeknek nevezzük. Ez az elv még ma is alapja szinte valamennyi digitális számító-
+gépnek. A Neumann-elvű gépnek öt elemi része volt: a memória, az aritmetikai-logikai, a vezér-
+lő, a bemeneti és a kimeneti egység. Ezek memóriaközpontú számítógépek voltak.
+Az 1960-as évek elején a DEC (Digital Equipment Corporation) bemutatta a PDP-8-at. E
+számítógépben alkalmazták először a BUS (BUSZ) rendszert, amely megteremtette a számítógé-
+pek bővítésének lehetőségét. Tehát a felhasználó később is – az igényeinek megfelelően – fej-
+leszthette számítógépét, például nagyobb memóriával vagy új perifériaillesztőkkel.
+A BUSZ nem más, mint párhuzamos kábelek összessége, amelyeket a számítógép részegysé-
+geinek összekötésére használnak. Ez az architektúra olyan jelentős újítás volt (a memóriaközpon-
+tú IAS géphez képest), hogy azóta is alkalmazzák majdnem minden kisszámítógépben.
+Érdekességként megjegyezzük, hogy már 1964-ben is készítettek olyan számítógépet, a CDC-
+6600-at, ahol több processzort is használtak. Egyet az összeadáshoz, egy másikat a szorzáshoz,
+harmadikat az osztáshoz, és külön processzor volt az input/output műveletek elvégzéséhez.
+A felsorolt néhány fejlesztés volt az, amelyek alapvetően meghatározták a mai számítógépek
+felépítését. Ennek megfelelően a számítógép-architektúra egy busz (más néven sín) rendszerre
+épül, amely biztosítja a kapcsolatot a részegységek között. A rendszerbuszhoz kapcsolódik a
+központi egység (CPU), a belső (operatív) memória és az input/output egységek (a perifériail-
+lesztők).

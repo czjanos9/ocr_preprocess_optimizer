@@ -1,0 +1,36 @@
+2.2.2. A vezérlőegység
+A vezérlőegység feladata a processzor működésének ütemezése és a külső egységekkel történő
+kommunikáció vezérlése. Működés közben az operatív memóriából az utasításregiszterbe töltő-
+dik a programutasítás. A vezérlőegység a betöltött utasításkódnak megfelelően vezérli a procesz-
+szort.
+Kétféle vezérlési módot különböztetünk meg: a huzalozott (hardware) és a mikroprogramozott
+(firmware) vezérlést. A huzalozott vezérlés utasításkészlete kötött, az nem változtatható meg. A
+mikroprogramozott vezérlés azt jelenti, hogy egy processzorutasítás több mikroutasításból tevő-
+dik össze, tehát az utasításkészlet utólag megváltoztatható.
+2.2.3. A regisztertömb
+A processzornak a működéséhez szüksége van gyors, belső memóriára, amelyben tárolja pél-
+dául az utasításokat, vagy a műveletek input és output adatait. E feladatot a regiszterek látják el,
+amelyek korlátozott számuk és méretük miatt nagymennyiségű adat tárolására nem használhatók.
+(Erre való az operatív memória.)
+A regisztertömb elemeit – funkciójuk szerint – három fő csoportba sorolhatjuk:
+− Az ALU-hoz tartozó regiszterek, amelyek a műveletek operandusait és eredményeit, va-
+lamint a jelzőbiteket tárolják. Ezek az akkumulátor(ok) (accu) és a jelzőbit (flag) regiszte-
+rek.
+− A vezérlőegységhez tartozó regiszterek, amelyek a vezérlést, a címzést és az utasítás-
+végrehajtást támogatják. Ezek közé tartozik az utasításregiszter, az utasításszámláló, az
+indexregiszter és a veremmutató is.
+− Az általános célú regiszterek, amelyekben tárolhatunk adatokat, vezérlőkódokat és címe-
+ket is.
+A regiszterek szóhossza (hány bit hosszúságú) általában megegyezik a processzor szóhosszá-
+val. (A legelterjedtebbek a 16, 32 és a 64 bit szóhosszúságú processzorok.)
+A nagyobb számokkal végzett műveletekhez, a nagyobb memóriacímek eléréséhez a regiszte-
+rek összekapcsolhatók, úgynevezett regiszterpárokat használhatunk.
+2.2.4. A processzor üzemmódjai
+A normál működési állapot
+A Neumann-elvű, tárolt programú számítógépek normál állapotán azt értjük, amikor a pro-
+cesszor egymás után végrehajtja az operatív memóriában tárolt utasításokat. Tehát ilyenkor az
+utasításciklusok egymás utáni végrehajtása történik.
+Az utasításciklus három részből áll: az utasítás betöltése az operatív memóriából (az utasítás-
+mutató regiszterben tárolt címről), majd az utasítás hosszának megfelelően beállítja a következő
+utasítás címét, és végül végrehajtja azt.
+8

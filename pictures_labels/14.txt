@@ -1,0 +1,50 @@
+Ugyanígy egyértelműen felírható ez a szám kettes számrendszerben is:
+n
+n
+m
+m
+m
+m b...bbb...bb −
+−
+−
+−
+−
+− ⋅++⋅++⋅++⋅+⋅ 22222 1
+101
+1
+1 (3-2.)
+ahol: m, n = 0, 1, 2, ... és bm ... b0 ... b-n értéke 0 vagy 1.
+Mivel a kettes számrendszerben is olyan a szimbólumokat (számjegyeket) használunk a szá-
+mok írásakor, amik a tízes számrendszerbeli számokban is előfordulnak, ránézésre nem mindig
+egyértelmű, hogy melyik számrendszert használjuk. A félreértések elkerülése érdekében a rend-
+szer alapszámát indexben jelezzük. Például:
+1110 = 10112 vagy 10102 = 1010
+A továbbiakban a kettes számrendszerbeli (bináris) szám egy helyi értékét bitnek nevezzük.
+(Bit: az angol binary digit szavak összevonásából származik, de „pici”, „falat” jelentése is van.)
+Ennek megfelelően a fenti, 3-2. képlettel felírt bináris szám ábrázolására m+n+1 bit szükséges.
+A bit az informatikában használatos legkisebb információhordozó egység, az informatika
+alapegysége, értéke: 0 vagy 1.5
+A tízes számrendszerben ezresével csoportosíthatjuk a számokat – az egyszerűbb kezelhető-
+ség érdekében –, és ezeknek a nagyságrendeknek külön elnevezést adhatunk. A bináris számok-
+nál is ezt a hagyományt követik, bár itt nem pontosan ezerszeres a váltószám.
+Például 1 kg (kilogramm) = 103 g (gramm), de 1 kbit (kilobit) = 210 = 1024 bit. Ennek megfe-
+lelően felírható a következő táblázat:
+1024 bit = 1 kbit (kilobit) = 210 bit
+1024 kbit = 1 Mbit (megabit) = 220 bit
+1024 Mbit = 1 Gbit (gigabit) = 230 bit
+1024 Gbit = 1 Tbit (terabit) = 240 bit
+A nyolcbites (nyolcjegyű) bináris számot byte-nak (bájt) nevezzük. A bájt a digitális informá-
+ciófeldolgozás alapegysége. A memóriák és a háttértárak kapacitását is bájtban mérik. Az előző-
+ekhez hasonlóan itt is használatos a kB (kilobájt), MB (megabájt), stb. elnevezés.
+Bináris számrendszerben a számok sokkal hosszabbak lesznek, mint a tízes számrendszerben.
+Láttuk, hogy 103 ≈ 210, ami azt jelenti, hogy 10 helyi érték hosszúságú bináris szám felel meg 3
+helyi értékű decimális számnak. Ebből látszik, hogy a bináris számok nehezen kezelhetőek. Az
+áttekintés megkönnyítésére vezették be a nyolcas (oktális) és a tizenhatos (hexadecimális) szám-
+rendszereket. Azért éppen ezeket, mert a számrendszerek között egyszerű az átváltás (8 = 23; 16
+= 24).
+Az oktális számrendszer előnye, hogy csak olyan jelöléseket (alaki értékeket) használunk,
+amelyek ismertek a tízes számrendszerben. Továbbá a nyolc közel áll a tízhez, így a nyolcas
+számrendszerben történő ábrázolás nem sokkal hosszabb, mint a tízes számrendszerbeli.
+A kettes és a nyolcas számrendszerek közötti átváltás egyszerűen elvégezhető. A bináris szá-
+mot jobbról bithármasokba (triádokba) csoportosítjuk, egy-egy csoport egy oktális szám-
+16

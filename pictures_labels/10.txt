@@ -1,0 +1,34 @@
+ideig megőrzi töltését. Így minden egyes cellában elegendő egy kapacitiv félvezető elem és egy erősítő tranzisz-
+tor. A tárolók (kondenzátorok) feltöltött vagy kisütött állapota jelenti az 1 vagy 0 értéket.
+A cellánkénti kis alkatrészigény miatt ezzel a technológiával olcsó és nagykapacitású tárolók
+építhetők.
+A kapacitiv jellegű információtárolás hátránya, hogy az elektromos töltés idővel csökken, il-
+letve megszűnik. Ez az idő ma már néhányszor 10 ms (milliszekundum). Annak érdekében, hogy az
+információ ne vesszen el, a DRAM állandó frissítést igényel, azaz a cellákat újra fel kell tölte-
+ni. Ezen kívül – ellentétben az SRAM-mal – a DRAM olvasáskor elveszíti a tartalmát, tehát azt
+vissza kell írni. A frissítésről és az adatvisszaírásról a memória áramkörei gondoskodnak, ami
+viszont jelentősen lassítja működését, hiszen a frissítés ideje alatt a DRAM másra nem használ-
+ható. A DRAM-ok elérési ideje több 10 ns.
+A DRAM-ot – a viszonylagos lassúsága ellenére – a számítógépek, munkaállomások operatív
+memóriájaként szokták felhasználni, mivel a DRAM nagy kapacitású, olcsó memóriatípus.
+A memória áramkörök mindig lassúbbak voltak, mint a CPU-k, így a processzornak általában
+várnia kell, míg a memóriából megkap egy adatot. (Minél lassúbb a memória, annál többet kell
+várnia a processzornak.)
+Felmerül a kérdés, hogy a sebesség növelése érdekében (drága és kis kapacitású) SRAM-okat,
+vagy a tárolókapacitás növelésére (olcsó, de lassú) DRAM-okat használjunk-e. Ezt a problémát
+úgy oldhatjuk meg, hogy a kicsi, de gyors memóriát kombináljuk a nagykapacitású, de lassú
+memóriával. Így egy viszonylag gyors és nagy memóriát kapunk.
+A fenti eljárást „cache-elérésnek” hívják, amely a következőképpen működik: amikor a CPU-
+nak szüksége van egy adatra, először azt a cache-ben (SRAM) nézi meg. Csak akkor fordul a fő
+memóriához (DRAM), ha az adat nincs a cache-ben. Az információ ekkor az operatív memóriá-
+ból a cache-be kerül, ahonnan a processzor már használhatja. Ez így még nem gyorsítja a memó-
+ria elérését, de amikor az operatív memória és cache között adatot másolunk, akkor nemcsak azt
+az egyet írjuk át, amire éppen szüksége van a CPU-nak, hanem a következőket is. Mivel az egy-
+más után végrehajtandó utasítások is és az egymás után feldolgozandó adatok is – az esetek dön-
+tő részében – sorban, egymás után helyezkednek el a memóriában, a processzor következő adat-
+kérése esetén a szükséges információk – nagy valószínűséggel – már a cache-ben lesznek.
+A cache-memóriák lehetnek a CPU-n kívül (Intel 386), és lehetnek belül (Intel 486). A továb-
+bi gyorsítások érdekében többszintű cache-t is alkalmazhatnak.
+Nem tekintjük külön memória kategóriának, de az eltérő felhasználás jellege miatt mégis kü-
+lön foglalkozunk a CMOS RAM memóriával.
+12

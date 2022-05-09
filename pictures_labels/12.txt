@@ -1,0 +1,27 @@
+Az EEPROM-hoz hasonló a flash memória. Egyre elterjedtebben használják digitális fényké-
+pezőgépekben, kamerákban és számítógépek adathordozójaként.
+A memóriaáramkörök – például a tápfeszültség-ingadozás hatására – hibákat véthetnek. Né-
+hány memóriafajta – a hibák elleni védekezésül – hibajelző vagy hibajavító kódot használ. Hiba-
+javító kód esetén a memória az alapadat mellé az íráskor újabb (un. hibafelismerő vagy hibajaví-
+tó) biteket rak. Olvasáskor ezek segítségével ellenőrzi az adatok helyességét.
+2.4. Az input/output egységek
+A számítógépek felhasználója az ember, ezért szükség van olyan berendezésekre, eszközökre,
+amelyek biztosítják az ember és a számítógép közötti kommunikációt. Ezek az eszközök a peri-
+fériák. Természetesen találkozhatunk olyan perifériákkal is, amelyeket csak a számítógépek
+használnak. Ilyenek a háttértárak (winchester, CD-ROM, floppy, stb.), illetve számítógépek kö-
+zötti kapcsolatot biztosító hálózati illesztők és modemek.
+Az input/output eszközöket csoportosíthatjuk funkciójuk szerint, így megkülönböztetünk be-
+meneti (input) és kimeneti (output) perifériákat. Az input perifériák segítségével vezéreljük a
+számítógépet, utasításokat és adatokat táplálhatunk bele. Az output perifériákkal a számítógép ad
+át szöveges, képi vagy nyomtatott információkat az ember számára. Ezen kívül lehetnek úgyne-
+vezett input-output eszközök is, amelyek képesek adatok fogadására és küldésére is. Ezek általá-
+ban a háttértárak, de ilyenek például a hálózati csatolók és az audio illesztők is.
+Nemcsak funkciójuk szerint csoportosíthatjuk ezeket az eszközöket. Például belső és külső
+perifériaként attól függően, hogy a számítógépházba beépítve, vagy azon kívül találhatók, cserél-
+hetőek vagy fixen beépítettek, hálózati eszközök vagy csak a munkaállomás használhatja azokat
+és így tovább.
+Egy újabb csoportosítási lehetőség az, hogy a rendszerbuszra kapcsolódó periféria-illesztő
+áramkör és a periféria közötti adatátvitel milyen típusú, ami például lehet soros vagy párhuza-
+mos.
+A perifériák részletesebb ismertetése nem e jegyzet célja.
+14

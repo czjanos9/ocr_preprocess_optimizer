@@ -1,0 +1,37 @@
+2.3. Az operatív memória
+Minden számítógép – a Neumann-elvből következik – tartalmaz egy belső (operatív vagy
+rendszer) memóriát az éppen futó programok (utasítások) és az adatok tárolására. A memória
+feladata, hogy az információt bináris formában tárolja, majd azt a megfelelő időben (pl. a pro-
+cesszor kérésére) rendelkezésre bocsássa.
+A memória az információ tárolását egy memóriamátrixban oldja meg. Ez nem más, mint ele-
+mi (egy bites) tároló-cellák összessége, ahol a sorok byte hosszúságúak. A mátrixos szervezés
+megkönnyíti az adatok helyének gyors és pontos meghatározását (minden egyes sor címezhető).
+A félvezető memóriák előtt a ferrittárak, azelőtt pedig a mágnesdobos tárak voltak az egyed-
+uralkodók. Ezek úgynevezett „nem felejtő” memóriák voltak, ugyanis a tápfeszültség kikapcsolá-
+sa (kimaradása) esetén megőrizték az információt. Ezeket az eszközöket a processzor írásra és
+olvasásra is tudta használni. Az ilyen típusú memóriákat nevezték RAM-nak (Random Access
+Memory). Az elnevezés arra utal, hogy a memória címfüggetlen, tetszőleges elérésű (tehát nem
+soros4 elérésű).
+A félvezető memóriák megjelenésével átvették ezt az elnevezést, ami nem volt szerencsés,
+ugyanis ezeknek az áramköröknek nem ez a fő jellemzője. Továbbá, a félvezető memóriák között
+megjelentek olyan típusok, amelyeket a CPU nem tud írni, csak olvasni. Ezek az úgynevezett
+ROM-ok (Read Only Memory), amelyek szintén tetszőleges (nem soros) elérésű memóriák.
+2.3.1. RAM (Random Access Memory)
+Mint már említettük, a RAM (tetszőleges vagy véletlen elérésű memória) elnevezés történeti
+okokból maradt fenn. Szerencsésebb lenne az írható-olvasható elnevezés használata.
+A félvezető RAM-ok csak tápfeszültség jelenlétében őrzik meg az információt, ezért a prog-
+ram indulásakor azt be kell tölteni egy nem felejtő memóriából vagy háttértárról.
+A RAM-nak két csoportját különböztetjük meg: a statikus és a dinamikus memóriákat.
+A statikus RAM-ok (SRAM) cellánként (bitenként) egy billenő áramkört (D flip-flop) tar-
+talmaznak. Ezen áramkörök tulajdonsága, hogy az információt (ami 0 vagy 1) mindaddig tárol-
+ják, amíg azt nem változtatjuk meg, vagy nem kapcsoljuk ki a tápfeszültséget.
+Egy D flip-flop áramkör hat NAND kapuból alakítható ki, amiből nyilvánvaló, hogy egy bit
+tárolásához jelentős mennyiségű alkatrészből álló áramkörre van szükség. Viszont előnye a nagy
+sebessége, tipikus elérési ideje néhány ns (nanoszekundum). Ezért az SRAM-okat olyan helyen
+alkalmazzák, ahol követelmény a nagy sebesség, és nem túl fontos a nagy kapacitás, például a
+cache memóriákban.
+A dinamikus RAM-ok (DRAM) az SRAM-mal ellentétben nem bonyolult felépítésű billenő
+áramköröket használnak, hanem kihasználják azt, hogy egy kondenzátor bizonyos
+4 Kezdetben a memóriaáramkörök fejlesztésekor csak léptetőregiszterekből, vagy még korábban (például az EDVAC számító-
+gépben) higanyos művonalból épített soros elérésű tárolókat (Serial Access Memory, SAM) használtak.
+11
